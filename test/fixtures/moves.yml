@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  game: one
+  player: one
+  move_type: MyString
+  position_row: 1
+  position_col: 1
+  wall_row: 1
+  wall_col: 1
+  wall_orientation: MyString
+  move_number: 1
+
+two:
+  game: two
+  player: two
+  move_type: MyString
+  position_row: 1
+  position_col: 1
+  wall_row: 1
+  wall_col: 1
+  wall_orientation: MyString
+  move_number: 1
