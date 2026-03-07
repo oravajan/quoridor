@@ -37,8 +37,8 @@ class MoveValidator
 
   def validate
     errors = []
-    errors << 'Target position is outside the board' unless within_board?(@to_row, @to_col)
-    errors << 'Invalid move' unless valid_move?
+    errors << "Target position is outside the board" unless within_board?(@to_row, @to_col)
+    errors << "Invalid move" unless valid_move?
     errors
   end
 
@@ -102,19 +102,19 @@ class MoveValidator
   # Checks if there is a wall between two adjacent cells
   def wall_between?(from_row, from_col, to_row, to_col)
     if to_row == from_row + 1 # moving down
-      @walls.any? { |w| w.orientation == 'horizontal' &&
+      @walls.any? { |w| w.orientation == "horizontal" &&
         w.row == from_row &&
         (w.col == from_col || w.col == from_col - 1) }
     elsif to_row == from_row - 1 # moving up
-      @walls.any? { |w| w.orientation == 'horizontal' &&
+      @walls.any? { |w| w.orientation == "horizontal" &&
         w.row == to_row &&
         (w.col == from_col || w.col == from_col - 1) }
     elsif to_col == from_col + 1 # moving right
-      @walls.any? { |w| w.orientation == 'vertical' &&
+      @walls.any? { |w| w.orientation == "vertical" &&
         w.col == from_col &&
         (w.row == from_row || w.row == from_row - 1) }
     elsif to_col == from_col - 1 # moving left
-      @walls.any? { |w| w.orientation == 'vertical' &&
+      @walls.any? { |w| w.orientation == "vertical" &&
         w.col == to_col &&
         (w.row == from_row || w.row == from_row - 1) }
     else
