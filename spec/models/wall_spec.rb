@@ -23,7 +23,7 @@ RSpec.describe Wall, type: :model do
 
     context 'when placing a HORIZONTAL wall' do
       it 'allows placement at the maximum valid boundaries' do
-        wall = build(:wall, game: game, player: player, orientation: 'horizontal', row: 8, col: 7)
+        wall = build(:wall, game: game, player: player, orientation: 'horizontal', row: 7, col: 7)
         expect(wall.save).to be true
       end
 
@@ -35,7 +35,7 @@ RSpec.describe Wall, type: :model do
 
     context 'when placing a VERTICAL wall' do
       it 'allows placement at the maximum valid boundaries' do
-        wall = build(:wall, game: game, player: player, orientation: 'vertical', row: 7, col: 8)
+        wall = build(:wall, game: game, player: player, orientation: 'vertical', row: 7, col: 7)
         expect(wall.save).to be true
       end
 

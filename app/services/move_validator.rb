@@ -9,7 +9,7 @@
 # Usage:
 #   result = MoveValidator.call(game: game, player: player, to_row: 4, to_col: 3)
 #   result.valid?   => true / false
-#   result.errors   => ['Move is blocked by a wall']
+#   result.errors   => ["Invalid move"]
 class MoveValidator
   Result = Struct.new(:valid?, :errors)
 
